@@ -5,18 +5,15 @@ import logoImg from '../../assets/logo.svg';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+
 import { Container, Content, Background } from './styles';
 
 const SignIn: React.FC = () => {
-  function handleSubmit(data: object): void {
-    console.log(data);
-  }
-
   return (
     <Container>
       <Content>
         <img src={logoImg} alt="GoBarber" />
-        <Form onSubmit={handleSubmit}>
+        <form>
           <h1>Faça seu logon</h1>
           <Input name="email" icon={FiMail} placeholder="E-mail" />
           <Input
@@ -27,7 +24,7 @@ const SignIn: React.FC = () => {
           />
           <Button type="submit">Entrar</Button>
           <a href="forgot">Esqueci minha senha</a>
-        </Form>
+        </form>
         <a href="">
           <FiLogIn />
           Criar conta
